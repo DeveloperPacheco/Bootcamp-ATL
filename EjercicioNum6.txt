@@ -1,0 +1,70 @@
+import javax.swing.*;
+
+public class Main {
+
+    public static boolean logicaIf(String eleccion) {
+
+        boolean bandera = true;
+
+        if (eleccion.equals("A")) {
+            bandera = false;
+            System.out.println("Alex decidió tomar el sendero de la izquierda. A medida que avanzaba, se encontró con un arroyo misterioso que bloqueaba su camino ");
+        } else if (eleccion.equals("B")) {
+            bandera = false;
+            System.out.println("Alex optó por el sendero de la derecha. Pronto llegó a un claro soleado en el bosque donde se encontró con un enigmático anciano.\n" +
+                    " El anciano le ofreció un mapa antiguo que supuestamente lo guiaría hasta el tesoro");
+        } else {
+            JOptionPane.showMessageDialog(null, "El valor ingresado no existe");
+//            System.out.println("Opcion no valida..!!");
+        }
+
+        return bandera;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Había una vez un valiente aventurero llamado Alex que se adentró en el Bosque Encantado. \n" +
+                " El bosque era conocido por sus extraños poderes mágicos y criaturas fascinantes. \n" +
+                " Alex estaba en busca de un tesoro legendario que se decía que se encontraba oculto en lo más profundo del bosque.\n" +
+                "\n" +
+                "Tras caminar un rato, Alex se encontró con un camino bifurcado. ¿Debería tomar el sendero de la izquierda o el de la derecha?");
+
+
+//        String eleccion = JOptionPane.showInputDialog("Elige la derecha (A), elige la izquierda (B) :");
+
+        boolean bandera = true;
+
+        //Todo ver1
+
+//        while (bandera){
+//
+//            String eleccion = JOptionPane.showInputDialog("Elige la derecha (A), elige la izquierda (B) :");
+//
+//
+//            if (eleccion.equals("A")){
+//                bandera = false;
+//                System.out.println("Alex decidió tomar el sendero de la izquierda. A medida que avanzaba, se encontró con un arroyo misterioso que bloqueaba su camino ");
+//            }
+//            else if (eleccion.equals("B")){
+//                bandera = false;
+//                System.out.println("Alex optó por el sendero de la derecha. Pronto llegó a un claro soleado en el bosque donde se encontró con un enigmático anciano.\n" +
+//                        " El anciano le ofreció un mapa antiguo que supuestamente lo guiaría hasta el tesoro");
+//            }
+//
+//            else {
+//                JOptionPane.showMessageDialog(null, "El valor ingresado no existe");
+////            System.out.println("Opcion no valida..!!");
+//            }
+//        }
+
+        //Todo ver2
+
+        while (bandera){
+
+            String eleccion = JOptionPane.showInputDialog("Elige la derecha (A), elige la izquierda (B) :");
+
+            bandera = logicaIf(eleccion);
+        }
+    }
+}
+
